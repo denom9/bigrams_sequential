@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/samuele/Documenti/Università/Parallel Computing/Progetto mid-term/sequential/main.cpp
+iostream
+-
+fstream
+-
+thread
+-
+iomanip
+-
+unordered_map
+-
+omp.h
+-
+cmath
+-
+cstring
+-
+utilities.h
+/home/samuele/Documenti/Università/Parallel Computing/Progetto mid-term/sequential/utilities.h
+
+/home/samuele/Documenti/Università/Parallel Computing/Progetto mid-term/sequential/utilities.h
+
