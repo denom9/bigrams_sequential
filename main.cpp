@@ -14,13 +14,13 @@
 
 int main(int argc, char* argv[]) {
     const char* INPUT_PATH = argv[1];
-
+    const char* OUTPUT_PATH = argv[2];
     std::ifstream input,size;
     std::ofstream outputWords,outputLetters;
 
     std::string ngram[NGRAM_LENGTH],tmpString = "",line,words_ngram;
 
-    int words_index,letters_index;
+    int words_index,letters_index=0;
     char nextChar,letters_ngram[NGRAM_LENGTH + 1] = "";
     char* buffer;
 
@@ -40,6 +40,8 @@ int main(int argc, char* argv[]) {
     input.read(buffer,file_size);
     input.close();
 
+
+    //printf("%s\n",buffer);
 
     for(int i = 0; i < file_size; i++){
         nextChar = buffer[i];
@@ -74,8 +76,8 @@ int main(int argc, char* argv[]) {
 
     /* PRINT RESULTS */
 
-    outputWords.open("../files/outputs/sequential_output_words.txt", std::ios::binary);
-    outputLetters.open("../files/outputs/sequential_output_letters.txt", std::ios::binary);
+    outputWords.open((std::string)OUTPUT_PATH + "sequential_output_words.txt", std::ios::binary);
+    outputLetters.open((std::string)OUTPUT_PATH + "sequential_output_letters.txt", std::ios::binary);
 
 
     for ( auto mapIterator = wordsHashtable.begin(); mapIterator != lettersHashtable.end(); ++mapIterator )
